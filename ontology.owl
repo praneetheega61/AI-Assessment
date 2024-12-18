@@ -1,0 +1,314 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:ontology="urn:shapes:ontology#">
+    <Ontology/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- urn:shapes:ontology#hasFormula -->
+
+    <AnnotationProperty rdf:about="urn:shapes:ontology#hasFormula"/>
+    
+
+
+    <!-- urn:shapes:ontology#hasProperty -->
+
+    <AnnotationProperty rdf:about="urn:shapes:ontology#hasProperty"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- urn:shapes:ontology#Formula -->
+
+    <Class rdf:about="urn:shapes:ontology#Formula"/>
+    
+
+
+    <!-- urn:shapes:ontology#Property -->
+
+    <Class rdf:about="urn:shapes:ontology#Property"/>
+    
+
+
+    <!-- urn:shapes:ontology#Shape -->
+
+    <Class rdf:about="urn:shapes:ontology#Shape"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- urn:shapes:ontology#Angles -->
+
+    <NamedIndividual rdf:about="urn:shapes:ontology#Angles">
+        <rdf:type rdf:resource="urn:shapes:ontology#Property"/>
+        <rdfs:comment>The angles between the sides of the shape.</rdfs:comment>
+        <rdfs:label>Angles</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- urn:shapes:ontology#Area -->
+
+    <NamedIndividual rdf:about="urn:shapes:ontology#Area">
+        <rdf:type rdf:resource="urn:shapes:ontology#Property"/>
+        <rdfs:comment>The size of the surface enclosed by the shape.</rdfs:comment>
+        <rdfs:label>Area</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- urn:shapes:ontology#Circle -->
+
+    <NamedIndividual rdf:about="urn:shapes:ontology#Circle">
+        <rdf:type rdf:resource="urn:shapes:ontology#Shape"/>
+        <rdfs:comment>A round plane figure whose boundary consists of points equidistant from a fixed point.</rdfs:comment>
+        <rdfs:label>Circle</rdfs:label>
+        <ontology:hasFormula rdf:resource="urn:shapes:ontology#CircleArea"/>
+        <ontology:hasFormula rdf:resource="urn:shapes:ontology#CircleCircumference"/>
+        <ontology:hasProperty rdf:resource="urn:shapes:ontology#Area"/>
+        <ontology:hasProperty rdf:resource="urn:shapes:ontology#Circumference"/>
+    </NamedIndividual>
+    
+
+
+    <!-- urn:shapes:ontology#CircleArea -->
+
+    <NamedIndividual rdf:about="urn:shapes:ontology#CircleArea">
+        <rdf:type rdf:resource="urn:shapes:ontology#Formula"/>
+        <rdfs:comment>pi * radius^2</rdfs:comment>
+        <rdfs:label>CircleArea</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- urn:shapes:ontology#CircleCircumference -->
+
+    <NamedIndividual rdf:about="urn:shapes:ontology#CircleCircumference">
+        <rdf:type rdf:resource="urn:shapes:ontology#Formula"/>
+        <rdfs:comment>2 * pi * radius</rdfs:comment>
+        <rdfs:label>CircleCircumference</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- urn:shapes:ontology#Circumference -->
+
+    <NamedIndividual rdf:about="urn:shapes:ontology#Circumference">
+        <rdf:type rdf:resource="urn:shapes:ontology#Property"/>
+        <rdfs:comment>The enclosing boundary of a curved geometric figure.</rdfs:comment>
+        <rdfs:label>Circumference</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- urn:shapes:ontology#Diagonals -->
+
+    <NamedIndividual rdf:about="urn:shapes:ontology#Diagonals">
+        <rdf:type rdf:resource="urn:shapes:ontology#Property"/>
+        <rdfs:comment>The line segments connecting non-adjacent vertices of the shape.</rdfs:comment>
+        <rdfs:label>Diagonals</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- urn:shapes:ontology#Hexagon -->
+
+    <NamedIndividual rdf:about="urn:shapes:ontology#Hexagon">
+        <rdf:type rdf:resource="urn:shapes:ontology#Shape"/>
+        <rdfs:comment>A polygon with six edges and vertices.</rdfs:comment>
+        <rdfs:label>Hexagon</rdfs:label>
+        <ontology:hasFormula rdf:resource="urn:shapes:ontology#HexagonArea"/>
+        <ontology:hasProperty rdf:resource="urn:shapes:ontology#Area"/>
+        <ontology:hasProperty rdf:resource="urn:shapes:ontology#Perimeter"/>
+    </NamedIndividual>
+    
+
+
+    <!-- urn:shapes:ontology#HexagonArea -->
+
+    <NamedIndividual rdf:about="urn:shapes:ontology#HexagonArea">
+        <rdf:type rdf:resource="urn:shapes:ontology#Formula"/>
+        <rdfs:comment>3 * sqrt(3) / 2 * side^2</rdfs:comment>
+        <rdfs:label>HexagonArea</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- urn:shapes:ontology#Pentagon -->
+
+    <NamedIndividual rdf:about="urn:shapes:ontology#Pentagon">
+        <rdf:type rdf:resource="urn:shapes:ontology#Shape"/>
+        <rdfs:comment>A polygon with five edges and vertices.</rdfs:comment>
+        <rdfs:label>Pentagon</rdfs:label>
+        <ontology:hasFormula rdf:resource="urn:shapes:ontology#PentagonArea"/>
+        <ontology:hasProperty rdf:resource="urn:shapes:ontology#Area"/>
+        <ontology:hasProperty rdf:resource="urn:shapes:ontology#Perimeter"/>
+    </NamedIndividual>
+    
+
+
+    <!-- urn:shapes:ontology#PentagonArea -->
+
+    <NamedIndividual rdf:about="urn:shapes:ontology#PentagonArea">
+        <rdf:type rdf:resource="urn:shapes:ontology#Formula"/>
+        <rdfs:comment>1/4 * sqrt(5(5+2sqrt(5))) * side^2</rdfs:comment>
+        <rdfs:label>PentagonArea</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- urn:shapes:ontology#Perimeter -->
+
+    <NamedIndividual rdf:about="urn:shapes:ontology#Perimeter">
+        <rdf:type rdf:resource="urn:shapes:ontology#Property"/>
+        <rdfs:comment>The total length of the boundary of the shape.</rdfs:comment>
+        <rdfs:label>Perimeter</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- urn:shapes:ontology#Rectangle -->
+
+    <NamedIndividual rdf:about="urn:shapes:ontology#Rectangle">
+        <rdf:type rdf:resource="urn:shapes:ontology#Shape"/>
+        <rdfs:comment>A quadrilateral with opposite sides equal and four right angles.</rdfs:comment>
+        <rdfs:label>Rectangle</rdfs:label>
+        <ontology:hasFormula rdf:resource="urn:shapes:ontology#RectangleArea"/>
+        <ontology:hasFormula rdf:resource="urn:shapes:ontology#RectangleDiagonal"/>
+        <ontology:hasProperty rdf:resource="urn:shapes:ontology#Area"/>
+        <ontology:hasProperty rdf:resource="urn:shapes:ontology#Diagonals"/>
+        <ontology:hasProperty rdf:resource="urn:shapes:ontology#Perimeter"/>
+    </NamedIndividual>
+    
+
+
+    <!-- urn:shapes:ontology#RectangleArea -->
+
+    <NamedIndividual rdf:about="urn:shapes:ontology#RectangleArea">
+        <rdf:type rdf:resource="urn:shapes:ontology#Formula"/>
+        <rdfs:comment>length * breadth</rdfs:comment>
+        <rdfs:label>RectangleArea</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- urn:shapes:ontology#RectangleDiagonal -->
+
+    <NamedIndividual rdf:about="urn:shapes:ontology#RectangleDiagonal">
+        <rdf:type rdf:resource="urn:shapes:ontology#Formula"/>
+        <rdfs:comment>sqrt(length^2 + breadth^2)</rdfs:comment>
+        <rdfs:label>RectangleDiagonal</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- urn:shapes:ontology#Square -->
+
+    <NamedIndividual rdf:about="urn:shapes:ontology#Square">
+        <rdf:type rdf:resource="urn:shapes:ontology#Shape"/>
+        <rdfs:comment>A quadrilateral with four equal sides and angles.</rdfs:comment>
+        <rdfs:label>Square</rdfs:label>
+        <ontology:hasFormula rdf:resource="urn:shapes:ontology#SquareArea"/>
+        <ontology:hasFormula rdf:resource="urn:shapes:ontology#SquareDiagonal"/>
+        <ontology:hasProperty rdf:resource="urn:shapes:ontology#Area"/>
+        <ontology:hasProperty rdf:resource="urn:shapes:ontology#Diagonals"/>
+        <ontology:hasProperty rdf:resource="urn:shapes:ontology#Perimeter"/>
+    </NamedIndividual>
+    
+
+
+    <!-- urn:shapes:ontology#SquareArea -->
+
+    <NamedIndividual rdf:about="urn:shapes:ontology#SquareArea">
+        <rdf:type rdf:resource="urn:shapes:ontology#Formula"/>
+        <rdfs:comment>side^2</rdfs:comment>
+        <rdfs:label>SquareArea</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- urn:shapes:ontology#SquareDiagonal -->
+
+    <NamedIndividual rdf:about="urn:shapes:ontology#SquareDiagonal">
+        <rdf:type rdf:resource="urn:shapes:ontology#Formula"/>
+        <rdfs:comment>side * sqrt(2)</rdfs:comment>
+        <rdfs:label>SquareDiagonal</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- urn:shapes:ontology#Triangle -->
+
+    <NamedIndividual rdf:about="urn:shapes:ontology#Triangle">
+        <rdf:type rdf:resource="urn:shapes:ontology#Shape"/>
+        <rdfs:comment>A polygon with three edges and vertices.</rdfs:comment>
+        <rdfs:label>Triangle</rdfs:label>
+        <ontology:hasFormula rdf:resource="urn:shapes:ontology#TriangleArea"/>
+        <ontology:hasFormula rdf:resource="urn:shapes:ontology#TrianglePerimeter"/>
+        <ontology:hasProperty rdf:resource="urn:shapes:ontology#Angles"/>
+        <ontology:hasProperty rdf:resource="urn:shapes:ontology#Area"/>
+        <ontology:hasProperty rdf:resource="urn:shapes:ontology#Perimeter"/>
+    </NamedIndividual>
+    
+
+
+    <!-- urn:shapes:ontology#TriangleArea -->
+
+    <NamedIndividual rdf:about="urn:shapes:ontology#TriangleArea">
+        <rdf:type rdf:resource="urn:shapes:ontology#Formula"/>
+        <rdfs:comment>0.5 * base * height</rdfs:comment>
+        <rdfs:label>TriangleArea</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- urn:shapes:ontology#TrianglePerimeter -->
+
+    <NamedIndividual rdf:about="urn:shapes:ontology#TrianglePerimeter">
+        <rdf:type rdf:resource="urn:shapes:ontology#Formula"/>
+        <rdfs:comment>side1 + side2 + side3</rdfs:comment>
+        <rdfs:label>TrianglePerimeter</rdfs:label>
+    </NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.13) https://github.com/owlcs/owlapi -->
+
